@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messenger/utils/MessageItem.dart';
-
+import 'package:messenger/pages/ConversationView.dart';
 class Messages extends StatefulWidget {
   @override
   _MessagesState createState() => _MessagesState();
@@ -17,11 +17,22 @@ class _MessagesState extends State<Messages> {
         child: Container(
           child: Stack(
             children: [
-              CustomAppBar(identifier: identifier),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[Center(child: Text("Messages are displayed here"))],
-              )
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      child: ConversationView(),
+                    ),
+                  ),
+                  Container(
+                      height: 50.0,
+                      color: Colors.white,
+                      child: Text("Mescontainer"),
+                  ),
+                ],
+              ),
+              CustomAppBar(identifier: identifier),
             ],
           ),
         ),
@@ -49,8 +60,7 @@ class CustomAppBar extends StatelessWidget {
               width: 60.0,
               height: 60.0,
               decoration: BoxDecoration(
-                shape:BoxShape.circle,
-
+                shape: BoxShape.circle,
                 color: Theme.of(context).primaryColor,
                 boxShadow: [
                   BoxShadow(
@@ -59,13 +69,12 @@ class CustomAppBar extends StatelessWidget {
                     offset: Offset(0.0, 3.0),
                   ),
                 ],
-
               ),
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(30.0),
-                  onTap: ()=>Navigator.of(context).pop(),
+                  onTap: () => Navigator.of(context).pop(),
                   child: Icon(
                     Icons.arrow_back,
                     color: Colors.black,
