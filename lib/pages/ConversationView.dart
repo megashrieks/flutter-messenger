@@ -35,7 +35,7 @@ class _ConversationViewState extends State<ConversationView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: <Widget>[
         SizedBox(height: 120.0),
         Column(

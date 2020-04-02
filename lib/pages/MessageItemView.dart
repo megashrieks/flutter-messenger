@@ -45,17 +45,11 @@ class MessageItemView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Hero(
-                        tag:messageItem.name+"-name",
-                        child: Material(
-
-                          child: Text(
-                            messageItem.name,
-                            style: TextStyle(
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                      Text(
+                        messageItem.name,
+                        style: TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       Padding(
