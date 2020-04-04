@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messenger/pages/SignIn.dart';
+import 'package:messenger/pages/SignUp.dart';
 import 'package:messenger/pages/StartWrapper.dart';
 import 'pages/MessageList.dart';
 import 'pages/Messages.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/":(context)=>MessageList(),
         "/messages":(context) => Messages(),
         "/signin":(context) => SignIn(),
+        "/signup":(context) => SignUp(),
         "/start" :(context) => StartWrapper(),
       },
       initialRoute: '/start',
