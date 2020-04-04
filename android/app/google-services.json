@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "213224363912",
+    "firebase_url": "https://flutter-messenger-caa7d.firebaseio.com",
+    "project_id": "flutter-messenger-caa7d",
+    "storage_bucket": "flutter-messenger-caa7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213224363912:android:17f1ddef4f13336ec00c3d",
+        "android_client_info": {
+          "package_name": "com.acnologiancoder.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213224363912-21qrablm0k9rn6brj6v8th2he7sqoota.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJxdu1doZAASk7nijq9Ioht3lwhry_GWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213224363912-21qrablm0k9rn6brj6v8th2he7sqoota.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,7 +19,12 @@ class _MessagesState extends State<Messages> {
           children: [
             Column(
               children:[
-                Expanded(child: SingleChildScrollView(child: ConversationView())),
+                Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom:15.0),
+                      child: SingleChildScrollView(
+                          child: ConversationView(),),
+                    ),),
                 Container(
                   height:80.0,
                   color:Colors.blue,
