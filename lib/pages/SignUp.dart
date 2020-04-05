@@ -113,7 +113,9 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children:[
                   IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.of(context).pop();
+                    },
                     icon: FaIcon(FontAwesomeIcons.arrowLeft,),
                     iconSize: 25.0,
                     color: Colors.white,
@@ -138,11 +140,11 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
-                  )
+                  ),
 
-                ]
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),

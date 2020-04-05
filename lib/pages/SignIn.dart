@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SignIn extends StatefulWidget {
   @override
   _SignInState createState() => _SignInState();
@@ -8,8 +9,125 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
-        child: Text("Sign In"),
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: LayoutBuilder(
+            builder:(context,viewportConstraints) => SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: viewportConstraints.maxHeight,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children:[
+                    Column(
+                      children:[
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.fromLTRB(30.0, 120.0, 50.0, 10.0),
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              fontSize: 50.0,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 2.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical:30.0,horizontal:30.0),
+                          child: Column(
+                            children: [
+                              TextField(
+                                style:TextStyle(color:Colors.white,fontSize: 20.0),
+                                decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:Colors.cyanAccent,
+                                          width:3.0),),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:Colors.white,
+                                          width:3.0),),
+                                    labelText: "Email address",
+                                    labelStyle: TextStyle(
+                                      color:Colors.white,
+                                    )
+                                ),
+                              ),
+                              SizedBox(height:20.0),
+                              TextField(
+                                obscureText: true,
+                                style:TextStyle(color:Colors.white,fontSize: 20.0),
+                                decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:Colors.cyanAccent,
+                                          width:3.0),),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:Colors.white,
+                                          width:3.0),),
+                                    labelText: "Password",
+                                    labelStyle: TextStyle(
+                                      color:Colors.white,
+                                    )
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal:30.0,vertical:30.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children:[
+                          IconButton(
+                            onPressed: (){
+                              Navigator.of(context).pop();
+                            },
+                            icon: FaIcon(FontAwesomeIcons.arrowLeft,),
+                            iconSize: 25.0,
+                            color: Colors.white,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pushNamed("/signin");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 30.0, vertical: 15.0),
+                              decoration: BoxDecoration(
+                                color: Colors.cyanAccent,
+                                borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                              ),
+                              child: Text(
+                                "Finish",
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w800,
+                                  letterSpacing: 3.0,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

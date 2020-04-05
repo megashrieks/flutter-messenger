@@ -18,16 +18,18 @@ class _MessagesState extends State<Messages> {
         child: Stack(
           children: [
             Column(
-              children:[
+              children: [
                 Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom:15.0),
-                      child: SingleChildScrollView(
-                          child: ConversationView(),),
-                    ),),
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 15.0),
+                    child: SingleChildScrollView(
+                      child: ConversationView(),
+                    ),
+                  ),
+                ),
                 Container(
-                  height:80.0,
-                  color:Colors.blue,
+                  height: 80.0,
+                  color: Colors.blue,
                   child: Row(
                     children: <Widget>[
                       Expanded(
@@ -38,7 +40,7 @@ class _MessagesState extends State<Messages> {
                         ),
                       ),
                       FlatButton(
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Text("SEND"),
                       )
                     ],
